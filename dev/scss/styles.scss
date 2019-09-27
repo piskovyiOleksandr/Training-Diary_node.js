@@ -1,0 +1,50 @@
+
+
+body {
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: 'Roboto Slab', serif;
+  font-size: 12px;
+  .navbar-nav {
+    font-family: 'Amatic SC', cursive;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  .title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+}
+
+  label {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.workout ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+        font-size: 10px;
+    }
+}
+
+input, select, textarea {
+    font-size: 4px;
+}
+#name-workout, #exercises, #weight, #repeat, #sets {
+  font-size: 8px;
+}
+#weight, #repeat, #sets {
+  width: 80%;
+}
+#exercises option.e-name {
+  font-size: 8px;
+}
+.exercise-2 {
+  overflow: hidden;
+}
+}
+@import 'auth';

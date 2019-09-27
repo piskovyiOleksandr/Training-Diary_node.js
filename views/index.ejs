@@ -1,0 +1,65 @@
+<% include layout/header.ejs %>
+<div class="container">
+    <div class="auth">
+        <div class="auth-content">
+            <div class="login">
+                <form method="post">
+                    <div class="title text-center">
+                        <h1>Вхід</h1>
+                    </div>
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input type="text" class="form-control" id="login" placeholder="Login" required name="login">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required name="password">
+                    </div>
+                    <div class="form-group">
+                        <button id="login-button" class="btn btn-block btn-dark ">
+                            Вхід
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <p class="text-muted text-xs-center">
+                            Немає аккаунта? <a class="switch-button">Зареєструватися!</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="register">
+                <div class="title text-center">
+                    <h1>Реєстрація</h1>
+                </div>
+                <div class="registration-content">
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="r-login">Логін</label>
+                            <input type="text" class="form-control" id="r-login" placeholder="Login" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="r-password">Пароль</label>
+                            <input type="password" class="form-control" id="r-password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="r-confirmPassword">Повтор пароля</label>
+                            <input type="password" class="form-control" id="r-confirmPassword" placeholder="Confirm password" required>
+                        </div>
+                        <div class="form-group">
+                            <button id="register-button" class="btn btn-block btn-dark">
+                                Зареєструватися
+                            </button>
+                        </div>
+                    </form>
+                    <div class="form-group">
+                        <p class="text-muted text-xs-center">
+                            Уже є аккаунт? <a class="switch-button">Вхід!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+<% include layout/footer.ejs %>

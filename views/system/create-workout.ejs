@@ -1,0 +1,95 @@
+<% include ../layout/header.ejs %>
+<div class="container">
+    <div class="title">
+        <h5>Створити тренування</h5>
+    </div> 
+    <form method="POST">
+        <div class="form-group">
+            <label for="name-workout">Назва тренування</label>
+            <input type="text" class="form-control" id="name-workout" placeholder="Спина/плечі">
+        </div>
+        <div class="nav-exercises">
+            <h6>Виберіть групу м'язів</h6>
+            <ul class="nav nav-tabs ">
+                <li class="nav-item">
+                    <a class="nav-link ex" id="legs">ноги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ex">спина</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">груди</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">плечі</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">тріцепс</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">біцепс</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">прес</a>
+                </li>
+            </ul>
+        </div>
+        <div class="form-group ">
+            <div class="exercises">
+                <label for="exercises">Вправа</label>
+                    <select class="form-control" 
+                        id="exercises" 
+                        > 
+                    <% for (var i = 0; i < exercises.length; i++) { %>
+                        <option
+                        value="<%=exercises[i]._id %> <%=exercises[i].name %>"> 
+                             <%=exercises[i].name %>
+                        </option>
+                    <% } %>
+                    </select>
+            </div>
+        </div>
+        <div class="form-group d-flex justify-content-between">
+            <div class="weight">
+                <label for="weight">Вага</label>
+                <input type="number" id="weight" class="form-control" placeholder="20">
+            </div>
+            <div class="repeat">
+                <label for="repeat">Повтори</label>
+                <input type="number" id="repeat" class="form-control" placeholder="8-10">
+            </div>
+            <div class="sets">
+                <label for="sets">Підходи</label>
+                <input type="number" id="sets" class="form-control" placeholder="3">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="button" id="e-add" class="btn btn-block btn-outline-dark">
+                Добавить
+            </button>
+        </div>
+        <div class="workout">
+            <h6>Тренування</h6>
+            <span class="not-w">
+                Поки що Ви не додали вправ до тренування!
+            </span>
+            <div class="card mt-2">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="recommendations">Зауваження до тренування</label>
+            <textarea class="form-control" id="recommendations" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <button id="save-w" class="btn btn-block btn-dark">
+                Зберегти тренування
+            </button>
+        </div>
+    </form>
+</div>
+ 
+
+<% include ../layout/footer.ejs %>
