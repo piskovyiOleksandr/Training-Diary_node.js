@@ -5,13 +5,12 @@
         <% for (var i = 0; i < workouts.length; i++) { %>
           <div class="card mt-2 p-2">
             <div class="card-header">
-              <h5><%=workouts[i].workoutName%></h5>
+              <div class="title-header"><%=workouts[i].workoutName%></div>
             </div>
-            <h6>Вправи:</h6>
-            <ul class="list-group list-group-flush">
+            <div class="title">Вправи:</div>
+            <ul>
             <% for (var e = 0; e < workouts[i].exercises.length; e++) { %>
-              <li class="list-group-item"> 
-                  <%=e +1%>.
+              <li> 
                 <a href="/exercises/<%=workouts[i].exercises[e].id%>">
                    <%=workouts[i].exercises[e].exerciseName%>
                 </a> 
@@ -24,7 +23,7 @@
               <% } %>
             </ul>
             <div class="rec">
-              <h6>Зауваження до тренування</h6>
+              <div class="title">Зауваження до тренування:</div>
               <%=workouts[i].recommendations%>
             </div>
             <div class="card-footer text-right">

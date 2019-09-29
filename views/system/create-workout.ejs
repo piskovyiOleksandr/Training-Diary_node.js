@@ -1,5 +1,7 @@
 <% include ../layout/header.ejs %>
 <div class="container">
+    <div class="alert alert-success" role="alert">
+    </div>
     <div class="title">
         <h5>Створити тренування</h5>
     </div> 
@@ -8,45 +10,16 @@
             <label for="name-workout">Назва тренування</label>
             <input type="text" class="form-control" id="name-workout" placeholder="Спина/плечі">
         </div>
-        <div class="nav-exercises">
-            <h6>Виберіть групу м'язів</h6>
-            <ul class="nav nav-tabs ">
-                <li class="nav-item">
-                    <a class="nav-link ex" id="legs">ноги</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link ex">спина</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">груди</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">плечі</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">тріцепс</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">біцепс</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">прес</a>
-                </li>
-            </ul>
-        </div>
         <div class="form-group ">
             <div class="exercises">
                 <label for="exercises">Вправа</label>
-                    <select class="form-control" 
-                        id="exercises" 
-                        > 
+                <select class="form-control" id="exercises"> 
                     <% for (var i = 0; i < exercises.length; i++) { %>
-                        <option
-                        value="<%=exercises[i]._id %> <%=exercises[i].name %>"> 
+                        <option value="<%=exercises[i]._id %> <%=exercises[i].name %>"> 
                              <%=exercises[i].name %>
                         </option>
                     <% } %>
-                    </select>
+                </select>
             </div>
         </div>
         <div class="form-group d-flex justify-content-between">
@@ -69,15 +42,19 @@
             </button>
         </div>
         <div class="workout">
-            <h6>Тренування</h6>
-            <span class="not-w">
+            <div class="title">
+                Тренування
+            </div>
+            <div class="not-w">
                 Поки що Ви не додали вправ до тренування!
-            </span>
-            <div class="card mt-2">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"> </li>
+            </div>
+            <div class="container">
+                <div class="yes-w">
+                <ul class="list-exercises">
                 </ul>
             </div>
+            </div>
+            
         </div>
         <div class="form-group">
             <label for="recommendations">Зауваження до тренування</label>

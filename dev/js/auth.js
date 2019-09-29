@@ -50,12 +50,7 @@ $(function() {
       url: '/register'
     }).done(function (data) {
       if (!data.ok) {
-        $('.register h2').after('<p class="error">' + data.error + '</p>');
-        if (data.fields) {
-          data.fields.forEach(function (item) {
-            $('input[name=' + item + ']').addClass('error');
-          });
-        }
+        $('.alert').css("display", "block").text(data.error);
       } else {
         $(location).attr('href', '/');
       }
@@ -79,14 +74,8 @@ $(function() {
         url: '/login'
       }).done(function(data) {
         if (!data.ok) {
-          $('.login h2').after('<p class="error">' + data.error + '</p>');
-          if (data.fields) {
-            data.fields.forEach(function(item) {
-              $('input[name=' + item + ']').addClass('error');
-            });
-          }
+          $('.alert').css("display", "block").text(data.error);
         } else {
-          console.log(data)
          $(location).attr('href', '/create-workout');
         }
       });

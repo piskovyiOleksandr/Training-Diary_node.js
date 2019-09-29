@@ -5,16 +5,30 @@ body {
   margin: 0 auto;
   font-family: 'Roboto Slab', serif;
   font-size: 12px;
+  background: silver;
+  a.switch-button {
+    color: rgb(71, 71, 248) !important;
+  }
   .navbar-nav {
     font-family: 'Amatic SC', cursive;
     font-size: 16px;
     letter-spacing: 2px;
   }
-  .title {
+  .title, .title-header {
     font-family: 'Amatic SC', cursive;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
+    color: rgb(247, 75, 75);
     padding: 5px;
+}
+.title-header {
+  text-align: left;
+}
+
+.alert {
+  margin-top: 5px;
+  display: none;
 }
 
   label {
@@ -34,7 +48,8 @@ body {
 input, select, textarea {
     font-size: 4px;
 }
-#name-workout, #exercises, #weight, #repeat, #sets {
+#name-workout, #exercises, #weight, #repeat, #sets, #recommendations {
+  padding: 5px !important; 
   font-size: 8px;
 }
 #weight, #repeat, #sets {
@@ -46,5 +61,26 @@ input, select, textarea {
 .exercise-2 {
   overflow: hidden;
 }
+
+.workout {
+  padding-bottom: 15px;
+}
+  .yes-w {
+    display: none;
+  }
+  .list-exercises {
+    margin-left: 10px;
+  }
+  
+  li {
+    list-style: decimal !important;
+  }
+
+  .card {
+    background: rgb(163, 163, 163) !important;
+    ul {
+      padding-left: 8px;
+    }
+  }
 }
 @import 'auth';
