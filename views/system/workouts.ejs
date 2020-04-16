@@ -11,10 +11,10 @@
             <ul>
             <% for (var e = 0; e < workouts[i].exercises.length; e++) { %>
               <li> 
-                <a href="/exercises/<%=workouts[i].exercises[e].id%>">
+                <a class="a_work" href="/exercises/<%=workouts[i].exercises[e].id%>">
                    <%=workouts[i].exercises[e].exerciseName%>
                 </a> 
-                <span>
+                <span class="info-work">
                   <%=workouts[i].exercises[e].weight%>кг./
                   <%=workouts[i].exercises[e].repeat%>р./
                   <%=workouts[i].exercises[e].sets%>п. 

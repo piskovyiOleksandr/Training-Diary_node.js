@@ -5,9 +5,10 @@ body {
   margin: 0 auto;
   font-family: 'Roboto Slab', serif;
   font-size: 12px;
+  font-weight: bold;
   background: silver;
   a.switch-button {
-    color: rgb(93, 93, 179) !important;
+    color: rgb(77, 77, 128) !important;
   }
   .navbar-nav {
     font-family: 'Amatic SC', cursive;
@@ -19,7 +20,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: rgb(247, 75, 75);
+    color: rgb(177, 77, 77);
     padding: 5px;
 }
 .title-header {
@@ -44,13 +45,17 @@ body {
         font-size: 10px;
     }
 }
-
+.list-workouts a.a_work {
+  color: black !important;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
 input, select, textarea {
     font-size: 4px;
 }
 #name-workout, #exercises, #weight, #repeat, #sets, #recommendations {
   padding: 5px !important; 
-  font-size: 8px;
+  font-size: 10px;
 }
 #weight, #repeat, #sets {
   width: 80%;
@@ -82,5 +87,9 @@ input, select, textarea {
       padding-left: 8px;
     }
   }
+}
+
+.info-work {
+  color: rgb(65, 65, 65) !important;
 }
 @import 'auth';
