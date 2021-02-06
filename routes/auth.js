@@ -31,25 +31,25 @@ router.post('/register', (req, res) => {
     } else if (!/^[a-zA-Z0-9]+$/.test(login)) {
       res.json({
         ok: false,
-        error: 'Только латинские буквы и цифры!',
+        error: 'Тільки латинську букви і цифри!',
         fields: ['login']
       });
     } else if (login.length < 3 || login.length > 16) {
       res.json({
         ok: false,
-        error: 'Длина логина от 3 до 16 символов!',
+        error: 'Логін повинен бути від 3 до 16 символів!',
         fields: ['login']
       });
     } else if (password !== passwordConfirm) {
       res.json({
         ok: false,
-        error: 'Пароли не совпадают!',
+        error: 'Паролі не співпадають!',
         fields: ['password', 'confirmPassword']
       });
     } else if (password.length < 5) {
       res.json({
         ok: false,
-        error: 'Минимальная длина пароля 5 символов!',
+        error: 'Мінімальна кількість символів 6!',
         fields: ['password']
       });
     } else {
@@ -74,14 +74,14 @@ router.post('/register', (req, res) => {
                 console.log(err);
                 res.json({
                   ok: false,
-                  error: 'Ошибка, попробуйте позже!'
+                  error: 'Помилка, спробуйте ще!'
                 });
               });
           });
         } else {
           res.json({
             ok: false,
-            error: 'Имя занято!',
+            error: 'Імя зайняте!',
             fields: ['login']
           });
         }
@@ -101,7 +101,7 @@ router.post('/register', (req, res) => {
   
       res.json({
         ok: false,
-        error: 'Все поля должны быть заполнены!',
+        error: 'Всі поля повинні бути заповнені!',
         fields
       });
     } else {
@@ -112,7 +112,7 @@ router.post('/register', (req, res) => {
           if (!user) {
             res.json({
               ok: false,
-              error: 'Логин и пароль неверны!',
+              error: 'Логін і пароль не вірні!',
               fields: ['login', 'password']
             })
           } else {
@@ -120,7 +120,7 @@ router.post('/register', (req, res) => {
               if (!result) {
                 res.json({
                   ok: false,
-                  error: 'Логин и пароль неверны!',
+                  error: 'Логін і пароль не вірні!',
                   fields: ['login', 'password']
                 });
               } else {
@@ -139,7 +139,7 @@ router.post('/register', (req, res) => {
           console.log(err);
           res.json({
             ok: false,
-            error: 'Ошибка, попробуйте позже!'
+            error: 'Помилка, спробуйте ще!'
           });
         });
     }

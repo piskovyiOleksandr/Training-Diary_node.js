@@ -1,26 +1,38 @@
 
 
 body {
-  max-width: 640px;
+  max-width: 750px;
   margin: 0 auto;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-weight: bold;
-  background: silver;
+
+  .my-container {
+    margin-top: 20px;
+    padding: 20px;
+    border-right: 1px solid silver;
+    box-shadow: 0 0 10px 10px #D4D4D4;
+    p {
+      font-size: 14px;
+    }
+    .navbar {
+      background-color: rgb(253, 0, 0) !important;
+      opacity: 0.8;
+    }
+  }
   a.switch-button {
     color: rgb(77, 77, 128) !important;
   }
   .navbar-nav {
-    font-family: 'Amatic SC', cursive;
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: 2px;
   }
   .title, .title-header {
-    font-family: 'Amatic SC', cursive;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: rgb(177, 77, 77);
+    color: rgb(253, 0, 0);
+    opacity: 0.8;
     padding: 5px;
 }
 .title-header {
@@ -33,25 +45,26 @@ body {
 }
 
   label {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     text-decoration: underline;
+    color: rgb(253, 0, 0);
+    opacity: 0.8;
 }
 .workout ul {
     margin: 0;
     padding: 0;
     li {
-        list-style: none;
         font-size: 10px;
     }
 }
 .list-workouts a.a_work {
-  color: black !important;
   letter-spacing: 1px;
   font-size: 12px;
 }
 input, select, textarea {
     font-size: 4px;
+    opacity: 0.9;
 }
 #name-workout, #exercises, #weight, #repeat, #sets, #recommendations {
   padding: 5px !important; 
@@ -75,14 +88,16 @@ input, select, textarea {
   }
   .list-exercises {
     margin-left: 10px;
+    ul li {
+      font-size: 14px;
+    }
   }
   
-  li {
-    list-style: decimal !important;
-  }
+  
 
   .card {
-    background: rgb(163, 163, 163) !important;
+    background: hsl(51, 100%, 50%) !important;
+    opacity: 0.9;
     ul {
       padding-left: 8px;
     }
@@ -90,6 +105,6 @@ input, select, textarea {
 }
 
 .info-work {
-  color: rgb(65, 65, 65) !important;
+  color: rgb(68, 0, 255) !important;
 }
 @import 'auth';

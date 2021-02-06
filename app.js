@@ -9,19 +9,6 @@ const MongoStore = require('connect-mongo')(session);
 const config = require('./config');
 const routes = require('./routes');
 
-// database
-mongoose.Promise = global.Promise;
-mongoose.set('debug', config.IS_PRODUCTION);
-mongoose.connection
-  .on('error', error => console.log(error))
-  .on('close', () => console.log('Database connection closed.'))
-  .once('open', () => {
-    const info = mongoose.connections[0];
-    console.log(`Connected to ${info.host}:${info.port}/${info.name}`);
-  });
-mongoose.connect(config.MONGO_URL, { useMongoClient: true });
-
-// express
 const app = express();
 
 // sessions
@@ -68,12 +55,23 @@ app.use((req, res, next) => {
 app.use((error, req, res, next) => {
   res.status(error.status || 500);
   res.render('error', {
-    message: error.message,
-    error: !config.IS_PRODUCTION ? error : {}
+    message: error.message
   });
 });
 
-app.listen(config.PORT, () =>
-  console.log(`Example app listening on port ${config.PORT}!`)
-);
+
+async function start() {
+  try {
+    await mongoose.connect('mongodb+srv://oleksandr:oleksandr@cluster0.lleza.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true
+    })
+    app.listen(4000, () => console.log('Start localhost:4000!'))
+  } catch (e) {
+    console.log('Server Error', e.message)
+  }
+}
+
+start()
 

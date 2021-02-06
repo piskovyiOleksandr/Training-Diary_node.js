@@ -11,8 +11,8 @@ const models = require('../models');
 
     models.Exercise.find()
     .then((exercises) => {
-      console.log(exercises);
       if(exercises) {
+        console.log(exercises)
         res.render('system/create-workout', {
           ok: true,
           exercises,
@@ -53,7 +53,7 @@ const models = require('../models');
       if(!workout) {
           res.json({
               ok: false,
-              error: 'Ошибка, попробуйте позже!'
+              error: 'Помилка! Спробуйте пізніше!'
           });
       } else {
           console.log(workout);
@@ -72,7 +72,7 @@ const models = require('../models');
       console.log(err);
       res.json({
         ok: false,
-        error: 'Ошибка, попробуйте позже!'
+        error: 'Помилка! Спробуйте пізніше!'
       });
     });
     

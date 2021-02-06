@@ -10,8 +10,8 @@
             <div class="title">Вправи:</div>
             <ul>
             <% for (var e = 0; e < workouts[i].exercises.length; e++) { %>
-              <li> 
-                <a class="a_work" href="/exercises/<%=workouts[i].exercises[e].id%>">
+              <li class="text-info"> 
+                <a class="a_work text-info" href="/exercises/<%=workouts[i].exercises[e].id%>">
                    <%=workouts[i].exercises[e].exerciseName%>
                 </a> 
                 <span class="info-work">

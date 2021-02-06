@@ -13,7 +13,7 @@ $(function() {
       recommendations: $('#recommendations')
   }
 
-  $('.workout').find('ul.list-exercises').append("<li>"+data.exerciseName+' '+data.weight+'lb./'+ data.repeat + 'р./' + data.sets +'п.'+"</li>");
+  $('.workout').find('ul.list-exercises').append("<li class=\"text-info\">"+data.exerciseName+' '+data.weight+'lb./'+ data.repeat + 'р./' + data.sets +'п.'+"</li>");
     console.log(data);
     exercises.push(data);
   $('.not-w').css("display", "none");

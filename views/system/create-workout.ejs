@@ -1,5 +1,5 @@
 <% include ../layout/header.ejs %>
-<div class="container">
+<div class="container my-container">
     <div class="alert alert-success" role="alert">
     </div>
     <div class="title">
@@ -22,7 +22,7 @@
                 </select>
             </div>
         </div>
-        <div class="form-group d-flex justify-content-between">
+        <div class="form-group d-flex justify-content-between align-items-end">
             <div class="weight">
                 <label for="weight">Вага</label>
                 <input type="number" id="weight" class="form-control" placeholder="20">
@@ -35,22 +35,23 @@
                 <label for="sets">Підходи</label>
                 <input type="number" id="sets" class="form-control" placeholder="3">
             </div>
+            <div class="add-btn">
+                <button type="button" id="e-add" class="btn btn-outline-success">
+                    Добавить
+                </button>
+            </div>
         </div>
-        <div class="form-group">
-            <button type="button" id="e-add" class="btn btn-block btn-outline-dark">
-                Добавить
-            </button>
-        </div>
+        
         <div class="workout">
             <div class="title">
                 Тренування
             </div>
-            <div class="not-w">
+            <div class="not-w text-info">
                 Поки що Ви не додали вправ до тренування!
             </div>
             <div class="container">
                 <div class="yes-w">
-                <ul class="list-exercises">
+                <ul class="list-exercises text-info">
                 </ul>
             </div>
             </div>
@@ -61,7 +62,7 @@
             <textarea class="form-control" id="recommendations" rows="3"></textarea>
         </div>
         <div class="form-group">
-            <button id="save-w" class="btn btn-block btn-dark">
+            <button id="save-w" class="btn btn-block btn-success">
                 Зберегти тренування
             </button>
         </div>

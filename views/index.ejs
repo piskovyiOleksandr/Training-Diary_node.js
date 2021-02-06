@@ -1,5 +1,4 @@
 <% include layout/header.ejs %>
-<div class="container">
     <div class="auth">
         <div class="auth-content">
             <div class="login">
@@ -23,13 +22,13 @@
                         </button>
                     </div>
                     <div class="form-group">
-                        <p class="text-muted text-xs-center">
-                            Немає аккаунта? <a class="switch-button">Зареєструватися!</a>
+                        <p class="text-warning text-xs-center">
+                            Немає аккаунта? <a class="switch-button text-success">Зареєструватися!</a>
                         </p>
                     </div>
                 </form>
             </div>
-
+    
             <div class="register">
                 <div class="title text-center">
                     <h1>Реєстрація</h1>
@@ -58,13 +57,12 @@
                         </div>
                     </form>
                     <div class="form-group">
-                        <p class="text-muted text-xs-center">
-                            Уже є аккаунт? <a class="switch-button">Вхід!</a>
+                        <p class="text-warning text-xs-center">
+                            Уже є аккаунт? <a class="switch-button text-success">Вхід!</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
       </div>
-</div>
 <% include layout/footer.ejs %>
